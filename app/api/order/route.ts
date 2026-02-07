@@ -18,8 +18,6 @@ type OrderPayload = {
   contact: string;
   location?: string;
   note?: string;
-
-  // fixed items (optional, but you already have them)
   cream?: "fixed";
   bag?: "fixed";
   combucha?: "fixed";
@@ -30,6 +28,11 @@ function escapeHtml(text: string) {
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;");
+}
+
+export async function GET() {
+  // діагностика: в проді відкрий /api/order — має повернути ok:true
+  return NextResponse.json({ ok: true, route: "/api/order" });
 }
 
 export async function POST(req: Request) {
@@ -44,20 +47,14 @@ export async function POST(req: Request) {
       );
     }
 
-    const body = (await req.json()) as Partial<OrderPayload>;
+    const bodyUnknown: unknown = await req.json();
+    const body = bodyUnknown as Partial<OrderPayload>;
 
-    // minimal validation
     if (!body.contact || body.contact.trim().length < 3) {
-      return NextResponse.json(
-        { error: "Contact is required" },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: "Contact is required" }, { status: 400 });
     }
     if (!body.gloss || !body.mist) {
-      return NextResponse.json(
-        { error: "Gloss and mist are required" },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: "Gloss and mist are required" }, { status: 400 });
     }
 
     const now = new Date().toLocaleString("uk-UA", { timeZone: "Asia/Seoul" });
@@ -72,12 +69,9 @@ export async function POST(req: Request) {
       `<b>Location:</b> ${escapeHtml(body.location?.trim() || "—")}\n` +
       `<b>Note:</b> ${escapeHtml(body.note?.trim() || "—")}`;
 
-    const url = `https://api.telegram.org/bot${token}/sendMessage`;
-
-    const tgRes = await fetch(url, {
+    const tgRes = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      // parse_mode HTML so we can bold nicely
       body: JSON.stringify({
         chat_id: chatId,
         text: msg,
@@ -95,10 +89,8 @@ export async function POST(req: Request) {
     }
 
     return NextResponse.json({ ok: true });
-  } catch (e: any) {
-    return NextResponse.json(
-      { error: "Server error", details: e?.message ?? String(e) },
-      { status: 500 }
-    );
+  } catch (err) {
+    const message = err instanceof Error ? err.message : "Unknown error";
+    return NextResponse.json({ error: "Server error", details: message }, { status: 500 });
   }
 }
