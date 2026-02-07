@@ -34,8 +34,8 @@ function escapeHtml(text: string) {
 
 export async function POST(req: Request) {
   try {
-    const token = "8300127997:AAGU94GdYiYiLle2lNF33ymKgW4_weJsfZo";
-    const chatId = "422023261";
+    const token = process.env.TELEGRAM_BOT_TOKEN;
+    const chatId = process.env.TELEGRAM_CHAT_ID;
 
     if (!token || !chatId) {
       return NextResponse.json(
