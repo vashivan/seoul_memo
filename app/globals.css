@@ -23,7 +23,7 @@ body {
   font-family: var(--font-amatic-sc), system-ui, sans-serif;
 }
 
-.main {
+main {
   background-color: var(--background);
 }
 
