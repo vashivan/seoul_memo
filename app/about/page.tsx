@@ -2,8 +2,8 @@ import AboutPage from "@/components/AboutPage";
 
 export default function Page() {
   return (
-    <main>
+    <section>
       <AboutPage />
-    </main>
+    </section>
   )
 };

@@ -2,8 +2,8 @@ import BeforeOrderPage from "@/components/AboutOrderPage";
 
 export default function Page() {
   return (
-    <main>
+    <section>
       <BeforeOrderPage />
-    </main>
+    </section>
   )
 };
