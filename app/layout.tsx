@@ -10,8 +10,8 @@ const amatic = Amatic_SC({
 });
 
 export const metadata: Metadata = {
-  title: "Seoul memo / entry 001: Seoul sunset",
-  description: "Seoul sunset — це curated-бокс із Сеулу. Ми зібрали відчуття вечора в місті — у речах, яких хочеться торкатися та користуватися.",
+  title: "Seoul memo",
+  description: "Seoul memo. Box — це curated-бокс із Сеулу. Ми зібрали відчуття вечора в місті — у речах, яких хочеться торкатися та користуватися.",
 };
 
 export default function RootLayout({

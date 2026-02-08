@@ -1,0 +1,176 @@
+.wrap {
+  margin-inline: 1rem;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #111;
+}
+
+.triggerRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.triggerLink {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: #111;
+  font-size: 18px
+}
+
+.triggerLink:hover {
+  color: #000;
+}
+
+.sep {
+  color: #b3b3b3;
+}
+
+.triggerBtn {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  color: #6b6b6b;
+  font-size: 18px
+}
+
+.triggerBtn:hover {
+  color: #111;
+}
+
+.panel {
+  margin-top: 14px;
+  background: #fff;
+  overflow: hidden;
+  transition: opacity 200ms ease, max-height 250ms ease;
+}
+
+.panelInner {
+  padding: 18px 18px;
+}
+
+@media (min-width: 640px) {
+  .panelInner {
+    padding: 24px 24px;
+  }
+}
+
+.panelClosed {
+  opacity: 0;
+  max-height: 0;
+  pointer-events: none;
+}
+
+.panelOpen {
+  opacity: 1;
+  max-height: 2000px; /* достатньо для контенту */
+  pointer-events: auto;
+}
+
+.header {
+  margin-bottom: 14px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  margin: 6px 0 0 0;
+  color: #6b6b6b;
+  font-size: 16px;
+}
+
+.items {
+  border-top: 1px solid #eee;
+}
+
+.item {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.itemBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.itemTitle {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.plus {
+  color: #b3b3b3;
+  font-size: 18px;
+  line-height: 1;
+  transition: transform 180ms ease;
+}
+
+.plusOpen {
+  transform: rotate(45deg);
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 220ms ease;
+}
+
+.contentOpen {
+  max-height: 600px;
+}
+
+.contentInner {
+  padding-top: 10px;
+  color: #2b2b2b;
+  font-size: 16px;
+}
+
+.muted {
+  color: #6b6b6b;
+  margin-top: 6px;
+}
+
+.list {
+  margin: 8px 0 0 18px;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.list li {
+  margin: 4px 0;
+}
+
+.olist {
+  margin: 8px 0 0 18px;
+  padding: 0;
+}
+
+.olist li {
+  margin: 4px 0;
+}
+
+// .footer {
+//   margin-top: 14px;
+//   padding-top: 14px;
+//   border-top: 1px solid #eee;
+//   color: #6b6b6b;
+//   font-size: 13px;
+// }

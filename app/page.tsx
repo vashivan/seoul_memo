@@ -1,20 +1,53 @@
 import { YouTubeBackground } from "@/components/YouTubeBackground";
-import { Story } from "@/components/Story";
-import { BoxSection } from "@/components/BoxSection";
-import { OrderSection } from "@/components/OrderSection";
+import Link from "next/link";
+import styles from "../styles/MainPage.module.scss";
 
 export default function Page() {
   return (
-    <main>
-      <YouTubeBackground videoId="nOSQvWGFzWo" />
-      <Story />
+    <main className={styles.main}>
+      <YouTubeBackground videoId="D-F4L5Gfhik" />
 
-      <section className="boxWrap">
-        <div className="boxInner">
-          <BoxSection />
-          <OrderSection />
+      {/* overlay */}
+      <div className={styles.overlay} />
+
+      {/* content */}
+      <div className={styles.content}>
+        <div className={styles.badge}>Seoul memo</div>
+
+        <h1 className={styles.h1}>
+          Міста залишаються в деталях.
+          <br />
+          Ми збираємо їх для вас.
+        </h1>
+
+        <p className={styles.p}>
+          Атмосферні бокси з Сеулу. Подарунок або спогад.
+          <br />
+          Зібрано вручну. Узгоджується під вас.
+        </p>
+
+        <div className={styles.actions}>
+          <Link href="/seoul-sunset" className={styles.primaryBtn}>
+            Seoul Sunset
+          </Link>
         </div>
-      </section>
+
+        <div className={styles.metaRow}>
+          <Link href="/order#order-info" className={styles.metaLink}>
+            Перед замовленням — прочитати
+          </Link>
+          <span className={styles.dot}>•</span>
+          <Link href="/about" className={styles.metaLink}>
+            Про Seoul memo
+          </Link>
+        </div>
+      </div>
+
+      {/* bottom hint */}
+      {/* <div className={styles.bottomHint}>
+        <span className={styles.hintLine} />
+        <span className={styles.hintText}>scroll</span>
+      </div> */}
     </main>
   );
 }

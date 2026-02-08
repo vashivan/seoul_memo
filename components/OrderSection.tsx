@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { OrderInfoAccordion } from "./Accordeon";
 
 type GlossShade = "01 Soft Fig" | "02 Juicy Berry" | "03 Peach Squeeze" | "04 Rare Plum";
 type MistScent = "White Dazzle" | "Sunlit Apple" | "Pale Peony" | "Osmanthus Blanc";
@@ -284,6 +285,8 @@ export function OrderSection() {
             <p className="includedText">Один варіант. Входить у кожен Seoul sunset.</p>
           </div>
         </div>
+
+        <OrderInfoAccordion boxPrice="від 2600 грн."/>
 
         <div className="orderBlock contactBlock">
           <div className="blockHead">
