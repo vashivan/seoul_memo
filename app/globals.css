@@ -19,13 +19,9 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--foreground);
+  color: var(--background);
   font-family: var(--font-amatic-sc), system-ui, sans-serif;
-}
-
-main {
-  background-color: var(--background);
 }
 
 /* ===== Background ===== */
