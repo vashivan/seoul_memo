@@ -33,7 +33,7 @@ export default function Page() {
         </div>
 
         <div className={styles.metaRow}>
-          <Link href="/order#order-info" className={styles.metaLink}>
+          <Link href="/order" className={styles.metaLink}>
             Перед замовленням — прочитати
           </Link>
           <span className={styles.dot}>•</span>
