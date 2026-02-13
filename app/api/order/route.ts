@@ -1,26 +1,15 @@
 import { NextResponse } from "next/server";
 
-type GlossShade =
-  | "01 Soft Fig"
-  | "02 Juicy Berry"
-  | "03 Peach Squeeze"
-  | "04 Rare Plum";
-
-type MistScent =
-  | "White Dazzle"
-  | "Sunlit Apple"
-  | "Pale Peony"
-  | "Osmanthus Blanc";
-
 type OrderPayload = {
-  gloss: GlossShade;
-  mist: MistScent;
+  boxName: string;
+  selections: Array<{
+    itemId: string; // <-- краще string
+    itemName: string;
+    selectedVariant: string | null;
+  }>;
   contact: string;
   location?: string;
   note?: string;
-  cream?: "fixed";
-  bag?: "fixed";
-  combucha?: "fixed";
 };
 
 function escapeHtml(text: string) {
@@ -31,7 +20,6 @@ function escapeHtml(text: string) {
 }
 
 export async function GET() {
-  // діагностика: в проді відкрий /api/order — має повернути ok:true
   return NextResponse.json({ ok: true, route: "/api/order" });
 }
 
@@ -50,21 +38,35 @@ export async function POST(req: Request) {
     const bodyUnknown: unknown = await req.json();
     const body = bodyUnknown as Partial<OrderPayload>;
 
+    if (!body.boxName || body.boxName.trim().length < 1) {
+      return NextResponse.json({ error: "boxName is required" }, { status: 400 });
+    }
+
     if (!body.contact || body.contact.trim().length < 3) {
       return NextResponse.json({ error: "Contact is required" }, { status: 400 });
     }
-    if (!body.gloss || !body.mist) {
-      return NextResponse.json({ error: "Gloss and mist are required" }, { status: 400 });
+
+    if (!body.selections || !Array.isArray(body.selections)) {
+      return NextResponse.json({ error: "Selections are required" }, { status: 400 });
     }
 
     const now = new Date().toLocaleString("uk-UA", { timeZone: "Asia/Seoul" });
 
+    const optionsLines =
+      body.selections.length > 0
+        ? body.selections
+            .map((it) => {
+              const name = escapeHtml(it.itemName ?? "—");
+              const variant = it.selectedVariant ? escapeHtml(it.selectedVariant) : "—";
+              return `• ${name}: <b>${variant}</b>`;
+            })
+            .join("\n")
+        : "—";
+
     const msg =
-      `<b>Seoul sunset — new order</b>\n` +
+      `<b>${escapeHtml(body.boxName)} — new order</b>\n` +
       `<i>${escapeHtml(now)}</i>\n\n` +
-      `<b>Gloss:</b> ${escapeHtml(body.gloss)}\n` +
-      `<b>Mist:</b> ${escapeHtml(body.mist)}\n` +
-      `<b>Included:</b> hand cream, bag, kombucha\n\n` +
+      `<b>Options</b>\n${optionsLines}\n\n` +
       `<b>Contact:</b> ${escapeHtml(body.contact)}\n` +
       `<b>Location:</b> ${escapeHtml(body.location?.trim() || "—")}\n` +
       `<b>Note:</b> ${escapeHtml(body.note?.trim() || "—")}`;

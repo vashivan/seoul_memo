@@ -1,6 +1,8 @@
 "use client";
 
-export function BoxSection() {
+import { Box } from "@/utils/types";
+
+export function BoxSection({ box }: { box: Box }) {
     const scrollToBox = () => {
     document.getElementById("order")?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
@@ -8,20 +10,20 @@ export function BoxSection() {
   return (
     <section id="box">
       <div>
-        <h3 className="boxTitle">Що таке Seoul sunset?</h3>
+        <h3 className="boxTitle">Що таке {box.name}?</h3>
         <p className="boxText">
-          Seoul sunset — це curated-бокс із Сеулу. Ми зібрали відчуття вечора в місті — у речах, яких хочеться торкатися та користуватися.
+          {box.description}
         </p>
 
         <div className="grid">
           <div className="card">
             <h4>Всередині</h4>
             <ul>
-              <li>Крем для рук</li>
-              <li>Body/hair mist</li>
-              <li>Lip Serum</li>
-              <li>Kombucha в стіках</li>
-              <li>Тканинна сумка для найнеобхіднішого</li>
+              {box.items.map((item) => (
+                <li key={item.id}>
+                  {item.name}
+                </li>
+              ))}
             </ul>
             <p className="muted">Склад може трохи змінюватися за бажанням. <br/> Настрій — ні.</p>
           </div>

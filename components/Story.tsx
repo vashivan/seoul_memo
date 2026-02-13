@@ -1,5 +1,6 @@
 "use client";
 
+import { Box } from "@/utils/types";
 import { motion } from "framer-motion";
 
 const fadeUp = {
@@ -30,14 +31,17 @@ function Scene({ lines, title, kicker }: { lines: string[]; title?: string; kick
   );
 }
 
-export function Story() {
+export function Story({ box }: {box: Box}) {
   const scrollToBox = () => {
     document.getElementById("box")?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
     <div className="storyWrap">
-      <Scene
+      {box.story.map((scene, index) => (
+        <Scene key={index} kicker={scene.kicker} title={scene.title} lines={scene.lines} />
+      ))}
+      {/* <Scene
         kicker="Seoul memo / entry 001"
         title="Seoul sunset"
         lines={["Сеул.", "Ранній вечір.", "Місто ще рухається — але вже не поспішає."]}
@@ -47,7 +51,7 @@ export function Story() {
       <Scene lines={["Це та мить, яку ніхто не планує.", "Вона просто трапляється."]} />
       <Scene lines={["Деякі міста кричать.", "Сеул — шепоче.", "Особливо під вечір."]} />
       <Scene title="Ми зберегли це" lines={["Не як фото.", "Не як сувенір.", "Як маленький бокс — з відчуттям вечора."]} />
-      <Scene title="Всередині" lines={["Тепло.", "Запах вечора.", "М’якість.", "Тиха деталь із Сеулу."]} />
+      <Scene title="Всередині" lines={["Тепло.", "Запах вечора.", "М’якість.", "Тиха деталь із Сеулу."]} /> */}
 
       <section className="scene sceneEnd">
         <motion.div
