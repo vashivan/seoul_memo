@@ -8,14 +8,14 @@ import { Box } from "@/utils/types";
 const pureSeoulNightBox: Box = {
   id: 2,
   video: "NE8qBVTsxB4",
-  name: "Pure Seoul Night Routine",
+  name: "Seoul Pure Night Routine",
   boxPrice: 2800,
   description:
     "Pure Seoul Night — це тиха ніч для себе. Ніч без шуму, без зайвого світла. Лише м’який догляд, теплий вогонь і спокій, який залишається з тобою.",
   story: [
     {
       kicker: "Seoul memo / entry 002",
-      title: "Pure Seoul NIght Routine",
+      title: "Seoul Pure Night Routine",
       lines: [
         "Сеул. Ти.",
         "Пізня ніч. Атмосфера для себе.",
