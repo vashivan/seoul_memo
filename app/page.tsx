@@ -31,7 +31,7 @@ export default function Page() {
             Seoul Sunset
           </Link>
           <Link href="/pure-night" className={styles.primaryBtn}>
-            Pure Seoul Night
+            Seoul Pure Night
           </Link>
         </div>
 
