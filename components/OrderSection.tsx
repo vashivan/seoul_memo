@@ -93,7 +93,7 @@ export function OrderSection({ box }: { box: Box }) {
           />
         ))}
 
-        <OrderInfoAccordion boxPrice="від 2600 грн." />
+        <OrderInfoAccordion boxPrice={box.boxPrice} />
 
         <div className="orderBlock contactBlock">
           <div className="blockHead">

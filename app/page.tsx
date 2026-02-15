@@ -30,6 +30,9 @@ export default function Page() {
           <Link href="/seoul-sunset" className={styles.primaryBtn}>
             Seoul Sunset
           </Link>
+          <Link href="/pure-night" className={styles.primaryBtn}>
+            Pure Seoul Night
+          </Link>
         </div>
 
         <div className={styles.metaRow}>

@@ -14,7 +14,7 @@ export default function Footer() {
           Instagram
         </Link>
       </div>
-      <p className="color-white">© {new Date().getFullYear()} Seoul Memo. Всі права захищені.</p>
+      <p className="flex items-center text-center justify-center">© {new Date().getFullYear()} Seoul Memo. Всі права захищені.</p>
     </footer>
   );
 }

@@ -1,6 +1,8 @@
 export type Box = {
   id: number;
+  video: string,
   name: string;
+  boxPrice: number;
   description?: string;
   story: scene[];
   items: Item[];

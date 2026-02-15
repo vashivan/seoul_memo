@@ -7,7 +7,9 @@ import { Box } from "@/utils/types";
 
 const sunsetBox: Box = {
   id: 1,
+  video: "nOSQvWGFzWo",
   name: "Seoul sunset",
+  boxPrice: 2600,
   description: "Seoul sunset — це curated-бокс із Сеулу. Ми зібрали відчуття вечора в місті — у речах, яких хочеться торкатися та користуватися.",
   story: [
     { kicker: "Seoul memo / entry 001",
@@ -89,7 +91,7 @@ const sunsetBox: Box = {
 export default function Page() {
   return (
     <main>
-      <YouTubeBackground videoId="nOSQvWGFzWo" />
+      <YouTubeBackground videoId={sunsetBox.video} />
       <Story box={sunsetBox}/>
 
       <section className="boxWrap">

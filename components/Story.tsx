@@ -62,8 +62,8 @@ export function Story({ box }: {box: Box}) {
           viewport={{ amount: 0.6, once: true }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <h2 className="title">Seoul sunset. Box.</h2>
-          <p className="line">Якщо хочеш забрати цей вечір собі</p>
+          <h2 className="title">{box.name}. Box.</h2>
+          <p className="line">Якщо хочеш забрати цей спогад собі</p>
 
           <button className="cta" onClick={scrollToBox}>
             Отримати цей вечір

@@ -4,14 +4,14 @@ import { useId, useMemo, useState } from "react";
 import styles from "../styles/Accordeon.module.scss";
 
 type Props = {
-  boxPrice?: string;
+  boxPrice?: number | string;
   triggerLabel?: string;
 };
 
 type ItemKey = "price" | "delivery" | "custom" | "special" | "how";
 
 export function OrderInfoAccordion({
-  boxPrice = "уточнюється індивідуально",
+  boxPrice,
   triggerLabel = "Перед замовленням — прочитати",
 }: Props) {
   const uid = useId();
