@@ -45,12 +45,6 @@ export default function Page() {
           </Link>
         </div>
       </div>
-
-      {/* bottom hint */}
-      {/* <div className={styles.bottomHint}>
-        <span className={styles.hintLine} />
-        <span className={styles.hintText}>scroll</span>
-      </div> */}
     </main>
   );
 }

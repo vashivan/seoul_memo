@@ -33,6 +33,7 @@
   max-width: 760px;
   line-height: 1.6;
   font-size: 18px;
+  text-align: justify;
 }
 
 .topLinks {
@@ -69,27 +70,38 @@
   border: 1px solid #eaeaea;
   padding: 18px;
   background: #fff;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .h2 {
+  align-self: flex-start;
   margin: 0 0 8px;
-  font-size: 20px;
+  font-size: 22px;
   letter-spacing: -0.01em;
 }
 
 .text {
   margin: 0;
+  margin-bottom: 1rem;
   color: #555;
   line-height: 1.7;
   font-size: 18px;
+  text-align: justify;
+}
+
+.image {
+  width: 100%;
 }
 
 .list {
   margin: 0;
+  margin-bottom: 1rem;
   padding-left: 18px;
   color: #555;
   line-height: 1.8;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .cta {
@@ -173,7 +185,7 @@
 
 .footerText {
   margin: 0;
-  color: #666;
-  font-size: 13px;
+  color: #fff;
+  font-size: 16px;
   line-height: 1.6;
 }

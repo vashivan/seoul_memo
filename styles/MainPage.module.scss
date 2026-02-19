@@ -29,14 +29,14 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 22px;
+  font-size: 24px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 18px;
 }
 
 .h1 {
-  font-size: clamp(28px, 4.2vw, 56px);
+  font-size: clamp(32px, 4.2vw, 62px);
   line-height: 1.05;
   letter-spacing: -0.02em;
   margin: 0 0 18px 0;
