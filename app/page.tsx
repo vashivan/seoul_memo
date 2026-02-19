@@ -33,6 +33,9 @@ export default function Page() {
           <Link href="/pure-night" className={styles.primaryBtn}>
             Seoul Pure Night
           </Link>
+          <Link href="/mugbang" className={styles.primaryBtn}>
+            Seoul Mugbang
+          </Link>
         </div>
 
         <div className={styles.metaRow}>
