@@ -3,8 +3,42 @@
 import Link from "next/link";
 import styles from "../styles/AboutPage.module.scss";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function AboutPage() {
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const payload = {
+      name: (formData.get("name")?.toString().trim()) || "",
+      contact: (formData.get("contact")?.toString().trim()) || "",
+      message: (formData.get("message")?.toString().trim()) || "",
+      source: (formData.get("source") ?? "about").toString(),
+      pageUrl: window.location.href,
+    };
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/form", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(payload),
+      })
+
+      if (!res.ok) {
+        throw new Error("Network response was not ok");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    } finally {
+      form.reset();
+      setLoading(false);
+    }
+  };
+
   return (
     <main className={styles.main}>
       <header className={styles.header}>
@@ -86,13 +120,23 @@ export default function AboutPage() {
         </article>
       </section>
 
-      <section className={styles.cta}>
+      <section className={`${styles.cta} items-center justify-center`}>
         <div className={styles.ctaInner}>
           <div>
             <h2 className={styles.h3}>Якщо бажаєш більше</h2>
             <p className={styles.ctaText}>
               Ми завжди готові вислухати твої побажання та ідеї, знайти бажану річ в Сеулі та відправити тобі.
               Просто зв`яжись із нами через <Link className="underline" href="https://www.instagram.com/seoul.memo/">Instagram</Link> і ми обговоримо деталі.
+              <br />
+              Або заповни форму знизу, і ми зв’яжемося з тобою.
+              <form onSubmit={handleSubmit} className="flex flex-col gap-4 mt-4">
+                <input className="p-3 border-2 border-white text-white" name="name" type="text" placeholder="Твое ім'я" />
+                <input className="p-3 border-2 border-white text-white" name="contact" type="text" placeholder="номер телефону/email/instagram/telegram " />
+                <textarea className="p-3 border-2 border-white text-white" name="message" placeholder="Твое повідомлення" />
+                <button className="p-3 border-2 border-white text-white" type="submit">
+                  {loading ? "Відправляємо..." : "Відправити"}
+                </button>
+              </form>
             </p>
           </div>
         </div>

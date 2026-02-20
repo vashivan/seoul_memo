@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next"
 import { Amatic_SC} from "next/font/google";
 import "./globals.css";
 import { VhFix } from "@/components/VhFix";
@@ -26,6 +27,7 @@ export default function RootLayout({
       >
         <VhFix />
         {children}
+        <Analytics />
       </body>
     </html>
   );
