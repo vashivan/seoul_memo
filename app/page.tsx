@@ -2,8 +2,22 @@ import { YouTubeBackground } from "@/components/YouTubeBackground";
 import Link from "next/link";
 import styles from "../styles/MainPage.module.scss";
 import Footer from "@/components/Footer";
+import { prisma } from "@/lib/prisma";
 
-export default function Page() {
+export default async function Page() {
+  const boxes = await prisma.box.findMany({
+    select: {
+      id: true,
+      slug: true,
+      video: true,
+      name: true,
+      boxPrice: true,
+      description: true,
+      createdAt: true,
+      updatedAt: true
+    }
+  });
+
   return (
     <main className={styles.main}>
       <YouTubeBackground videoId="D-F4L5Gfhik" />
@@ -53,62 +67,25 @@ export default function Page() {
           </Link>
         </div>
 
-        {/* trust / clarity row
-        <div className={styles.valueRow}>
-          <div className={styles.valueItem}>
-            <span className={styles.valueTitle}>Зібрано вручну</span>
-            <span className={styles.valueText}>Речі з Сеулу, без масмаркету</span>
-          </div>
-          <div className={styles.valueItem}>
-            <span className={styles.valueTitle}>Під вас</span>
-            <span className={styles.valueText}>Варіанти всередині узгоджуємо</span>
-          </div>
-          <div className={styles.valueItem}>
-            <span className={styles.valueTitle}>Подарунок / спогад</span>
-            <span className={styles.valueText}>Для тих, хто був або хоче повернутись</span>
-          </div>
-        </div> */}
-
         {/* boxes */}
         <section id="boxes" className={styles.boxes}>
-          <div className={styles.boxCard}>
-            <div className={styles.boxTop}>
-              <div className={styles.boxName}>Seoul Sunset</div>
-              <div className={styles.boxPrice}>2600 ₴</div>
-            </div>
-            <div className={styles.boxDesc}>
-              Тепле світло, м’який ритм міста, тиха деталь із вечірнього Сеулу.
-            </div>
-            <Link href="/seoul-sunset" className={styles.cardBtn}>
-              Подивитись бокс →
-            </Link>
-          </div>
+          {boxes.map((box, index) => (
+            <div key={index}>
+              <div className={styles.boxCard} key={box.id}>
+                <div className={styles.boxTop}>
+                  <div className={styles.boxName}>{box.name}</div>
+                  <div className={styles.boxPrice}>{box.boxPrice} ₴</div>
+                </div>
 
-          <div className={styles.boxCard}>
-            <div className={styles.boxTop}>
-              <div className={styles.boxName}>Seoul Pure Night</div>
-              <div className={styles.boxPrice}>2800 ₴</div>
+                <div className={styles.boxDesc}>
+                  {box.description}
+                </div>
+                <Link href={box.slug} className={styles.cardBtn}>
+                  Подивитись бокс →
+                </Link>
+              </div>
             </div>
-            <div className={styles.boxDesc}>
-              Нічний догляд, тепле світло, спокій. Ритуал “для себе”.
-            </div>
-            <Link href="/pure-night" className={styles.cardBtn}>
-              Подивитись бокс →
-            </Link>
-          </div>
-
-          <div className={styles.boxCard}>
-            <div className={styles.boxTop}>
-              <div className={styles.boxName}>Seoul Mugbang</div>
-              <div className={styles.boxPrice}>2400 ₴</div>
-            </div>
-            <div className={styles.boxDesc}>
-              7-Eleven світло, пар від локшини, тиша за вікном. Нічна сцена.
-            </div>
-            <Link href="/mugbang" className={styles.cardBtn}>
-              Подивитись бокс →
-            </Link>
-          </div>
+          ))}
         </section>
 
         {/* micro CTA */}
