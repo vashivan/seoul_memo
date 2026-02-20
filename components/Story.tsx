@@ -32,9 +32,9 @@ function Scene({ lines, title, kicker }: { lines: string[]; title?: string; kick
 }
 
 export function Story({ box }: {box: Box}) {
-  const scrollToBox = () => {
-    document.getElementById("box")?.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
+  // const scrollToBox = () => {
+  //   document.getElementById("box")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  // };
 
   return (
     <div className="storyWrap">
@@ -53,7 +53,7 @@ export function Story({ box }: {box: Box}) {
       <Scene title="Ми зберегли це" lines={["Не як фото.", "Не як сувенір.", "Як маленький бокс — з відчуттям вечора."]} />
       <Scene title="Всередині" lines={["Тепло.", "Запах вечора.", "М’якість.", "Тиха деталь із Сеулу."]} /> */}
 
-      <section className="scene sceneEnd">
+      {/* <section className="scene sceneEnd">
         <motion.div
           className="sceneInner"
           variants={fadeUp}
@@ -69,7 +69,7 @@ export function Story({ box }: {box: Box}) {
             Отримати цей вечір
           </button>
         </motion.div>
-      </section>
+      </section> */}
     </div>
   );
 }

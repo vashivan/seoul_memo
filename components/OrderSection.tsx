@@ -78,7 +78,7 @@ export function OrderSection({ box }: { box: Box }) {
     <section id="order" className="orderWrap">
       <div className="orderHead">
         <p className="kicker">Seoul memo / order</p>
-        <h3 className="orderTitle">Обери деталі вечора</h3>
+        <h3 className="orderTitle">Обери індивідуальні деталі</h3>
         <p>*Натиснувши на заголовок продукту - можете прочитати інформацію про нього на сайті виробника.</p>
       </div>
 

@@ -1,0 +1,81 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Box {
+  id          Int     @id @default(autoincrement())
+  slug        String  @unique
+  video       String
+  name        String
+  boxPrice    Int
+  description String  @db.Text
+
+  storySlides StorySlide[]
+  items       BoxItem[]
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model StorySlide {
+  id      Int   @id @default(autoincrement())
+  boxId   Int
+  order   Int
+  kicker  String?
+  title   String?
+
+  box     Box   @relation(fields: [boxId], references: [id], onDelete: Cascade)
+  lines   StoryLine[]
+
+  @@unique([boxId, order])
+}
+
+model StoryLine {
+  id      Int @id @default(autoincrement())
+  slideId Int
+  order   Int
+  text    String @db.Text
+
+  slide   StorySlide @relation(fields: [slideId], references: [id], onDelete: Cascade)
+
+  @@unique([slideId, order])
+}
+
+model BoxItem {
+  id          Int @id @default(autoincrement())
+  boxId       Int
+  order       Int
+  name        String
+  description String @db.Text
+  link        String?
+  imageUrl    String?
+  imageAlt    String?
+
+  box         Box @relation(fields: [boxId], references: [id], onDelete: Cascade)
+  variants    ItemVariant[]
+
+  @@unique([boxId, order])
+}
+
+model ItemVariant {
+  id          Int @id @default(autoincrement())
+  itemId      Int
+  order       Int
+  name        String
+  description String?
+
+  item        BoxItem @relation(fields: [itemId], references: [id], onDelete: Cascade)
+
+  @@unique([itemId, order])
+}

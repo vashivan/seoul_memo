@@ -24,7 +24,7 @@ export default function AboutPage() {
     try {
       const res = await fetch("/api/form", {
         method: "POST",
-        headers: {"Content-Type": "application/json"},
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       })
 
@@ -120,7 +120,7 @@ export default function AboutPage() {
         </article>
       </section>
 
-      <section className={`${styles.cta} items-center justify-center`}>
+      <section className={`${styles.cta}`}>
         <div className={styles.ctaInner}>
           <div>
             <h2 className={styles.h3}>Якщо бажаєш більше</h2>
@@ -129,20 +129,22 @@ export default function AboutPage() {
               Просто зв`яжись із нами через <Link className="underline" href="https://www.instagram.com/seoul.memo/">Instagram</Link> і ми обговоримо деталі.
               <br />
               Або заповни форму знизу, і ми зв’яжемося з тобою.
-              <form onSubmit={handleSubmit} className="flex flex-col gap-4 mt-4">
-                <input className="p-3 border-2 border-white text-white" name="name" type="text" placeholder="Твое ім'я" />
-                <input className="p-3 border-2 border-white text-white" name="contact" type="text" placeholder="номер телефону/email/instagram/telegram " />
-                <textarea className="p-3 border-2 border-white text-white" name="message" placeholder="Твое повідомлення" />
-                <button className="p-3 border-2 border-white text-white" type="submit">
-                  {loading ? "Відправляємо..." : "Відправити"}
-                </button>
-              </form>
             </p>
+            <form id="form" onSubmit={handleSubmit} className="flex flex-col gap-4 mt-4">
+              <input className="p-3 border border-white text-white" name="name" type="text" placeholder="Твое ім'я" />
+              <input className="p-3 border border-white text-white" name="contact" type="text" placeholder="номер телефону/email/instagram/telegram " />
+              <textarea className="p-3 border border-white text-white" name="message" placeholder="Твое повідомлення" />
+              <button
+                className="p-3 border border-white text-white cursor-pointer hover:text-black hover:bg-white transition-all duration-300"
+                type="submit">
+                {loading ? "Відправляємо..." : "Відправити"}
+              </button>
+            </form>
           </div>
         </div>
       </section>
 
-      <section className={styles.cta}>
+      {/* <section className={styles.cta}>
         <div className={styles.ctaInner}>
           <div>
             <h3 className={styles.h3}>Хочеш свій перший Seoul memo?</h3>
@@ -157,7 +159,7 @@ export default function AboutPage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <footer className={styles.footer}>
         <p className={styles.footerText}>
