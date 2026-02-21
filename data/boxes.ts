@@ -24,7 +24,7 @@ export const boxes = [
           { name: "04 Rare Plum", description: "сливовий нюд" },
         ],
         link: "https://global.oliveyoung.com/product/detail?prdtNo=GA250732642&srsltid=AfmBOorbUJ8KCvOyY1bqXT0W4LkxetGx8zdjSw_e4pXyqJr95yVdGT3i",
-        imageUrl: "/lip_gloss.JPG",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655875/jnhcauhjxrsxklyzgdzv.jpg",
         imageAlt: "lip serum"
       },
       {
@@ -38,7 +38,7 @@ export const boxes = [
           { name: "Osmanthus Blanc", description: "теплий, чистий, спокійний" },
         ],
         link: "https://global.oliveyoung.com/display/page/brand-page?brandNo=B00121&srsltid=AfmBOooO8HyUNwzlPa-unCdqzUVLw7fZ5fmwBOK8cRHaN3a-tpe0jDGu",
-        imageUrl: "/round_around.JPG",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655878/nlyvoi7topcukt1wqhc3.jpg",
         imageAlt: "body mist"
       },
       {
@@ -49,7 +49,7 @@ export const boxes = [
           { name: "Slow Down", description: "musk, muguet, vanilla" },
         ],
         link: "https://global.oliveyoung.com/display/page/brand-page?brandNo=B00617&srsltid=AfmBOopVgIrpJUZbFsB7oC8p5dM48wGrRPUyHkv1AHX0GpnzNaaoBB4f",
-        imageUrl: "/hand_cream.jpg",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655874/bn0zakg8sprcyfeuccgz.png",
         imageAlt: "hand cream"
       },
       {
@@ -61,7 +61,7 @@ export const boxes = [
           { name: "Strawberry & Kiwi", description: "ківі-полуниця, смачне поєднання поєднання" },
         ],
         link: "https://global.oliveyoung.com/display/page/brand-page?brandNo=B00136&srsltid=AfmBOoqqfiK6P3ML9O2tYvnQPycfTpgEtcsxVwV3lyTY5NcTIPTnyqjq",
-        imageUrl: "/kombucha.jpg",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655872/b7lhpzh2pqghe3mz6fwf.jpg",
         imageAlt: "kombucha"
       },
       {
@@ -72,7 +72,7 @@ export const boxes = [
           { name: "Standard", description: "універсальний розмір і дизайн" },
         ],
         link: "https://avamhome.com/product/detail.html?product_no=2861&cate_no=523&display_group=1",
-        imageUrl: "/bag.jpg",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655869/irpiwz9aiaowozmss85z.jpg",
         imageAlt: "bag"
       },
     ],
@@ -105,7 +105,7 @@ export const boxes = [
           { name: "Standard", description: "для чутливої та втомленої шкіри" }
         ],
         link: "https://global.oliveyoung.com/product/detail?prdtNo=GA250228767&srsltid=AfmBOoo6j0XAmEcQTglPyqekWy5bLKiJ7OPzcVxiPqo4qPQRKGaFYLEX",
-        imageUrl: "/purito-cream.webp",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655877/cvvde6ancays7wucexdx.webp",
         imageAlt: "purito oat calming gel cream"
       },
       {
@@ -118,7 +118,7 @@ export const boxes = [
           { name: "Calming", description: "заспокійливий ефект" }
         ],
         link: "https://global.oliveyoung.com/product/detail?prdtNo=GA250430292&dataSource=search_result",
-        imageUrl: "/torriden-mask.webp",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655881/q3x23hq13m1iakskgatv.webp",
         imageAlt: "sheet mask"
       },
       {
@@ -133,7 +133,7 @@ export const boxes = [
           { name: "Mint Choco", description: "для тих, хто любить експерименти" }
         ],
         link: "https://global.oliveyoung.com/product/detail?prdtNo=GA210811541&dataSource=search_result",
-        imageUrl: "/lip-mask.webp",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655875/scmithddt665eot5isnj.webp",
         imageAlt: "night lip balm"
       },
       {
@@ -145,7 +145,7 @@ export const boxes = [
           { name: "Late night sex", description: "аромат, що заспокоює краще ніж будь-що" }
         ],
         link: "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000144464&utm_source=google&utm_medium=shopping_search&utm_campaign=onpro_emnet_googlepmax_25_0101_1231&utm_term=&_CAD=google_pmax&gad_source=1&gad_campaignid=19622638980&gbraid=0AAAAADKpDR4HsbbJ_6EeQ9dmLKbPvaDH6&gclid=Cj0KCQiA18DMBhDeARIsABtYwT2sn9JLRp1Cj2gwgIGKHFzD5KOQkjB19GqnnGamhzV4SctkM-AybOYaAg0KEALw_wcB&tab=product-info",
-        imageUrl: "/candle.webp",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655871/qw8jhdd484p2jiw4znpc.webp",
         imageAlt: "minimal candle"
       },
       {
@@ -157,7 +157,7 @@ export const boxes = [
           { name: "Набір", description: "набір з п`яти шкарпеток для сну" }
         ],
         link: "#",
-        imageUrl: "/sleeping_socks.png",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655881/q3x23hq13m1iakskgatv.webp",
         imageAlt: "sleep socks"
       }
     ]
@@ -193,7 +193,7 @@ export const boxes = [
           { name: "Carbonara", description: "гостро-кремова версія" }
         ],
         link: "#",
-        imageUrl: "/buldak.webp",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655870/y89nfiubrsmvls6xz6tc.webp",
         imageAlt: "buldak ramen"
       },
       {
@@ -205,7 +205,7 @@ export const boxes = [
           { name: "Classic", description: "традиційний смак" }
         ],
         link: "#",
-        imageUrl: "/yopokki.png",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655880/azl0o2vejnbyielqdi8n.png",
         imageAlt: "yopokki cup"
       },
       {
@@ -217,7 +217,7 @@ export const boxes = [
           { name: "Original", description: "класичний смак" }
         ],
         link: "#",
-        imageUrl: "/coockie.webp",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655871/p4cvekkt6ve31cku9qm3.webp",
         imageAlt: "korean mochi cookie"
       },
       {
@@ -231,7 +231,7 @@ export const boxes = [
           { name: "secret choose", description: "таємний вибір, здивуйте мене" }
         ],
         link: "#",
-        imageUrl: "/milkis.jpg",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655876/rx90fbv9rnlp7bbc1bg8.jpg",
         imageAlt: "korean drink can"
       },
       {
@@ -243,8 +243,176 @@ export const boxes = [
           { name: "Standard", description: "мінімалістичний сет" }
         ],
         link: "#",
-        imageUrl: "/ramen-pot.webp",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655877/dgmnw3h9okgvghglxtr7.webp",
         imageAlt: "korean ramen pot"
+      }
+    ]
+  },
+  {
+    id: 4,
+    video: "cIOTHiydsJM",
+    name: "Seoul Glass Hair",
+    boxPrice: 2400,
+    description:
+      "Seoul Glass Hair — це тиха ванна кімната після душу. Тепла пара. Крапля олії на долоні. Місто за вікном живе своїм життям, але тут — тільки ти і твій ритуал.",
+
+    story: [
+      {
+        kicker: "Seoul memo / entry 004",
+        title: "Seoul Glass Hair",
+        lines: [
+          "Пізній вечір. Вечірня рутина.",
+          "Тепла вода стікає по волоссю.",
+          "Світло відбивається в дзеркалі."
+        ]
+      },
+    ],
+
+    items: [
+      {
+        id: 1,
+        name: "Mise-en-scène Perfect 3 Minute Salon Mask",
+        description:
+          "інтенсивна 3-хвилинна маска для швидкого відновлення волосся. Живить, згладжує та повертає блиск. Ефект салону вдома — без зайвих кроків.",
+        variants: [
+          { name: "Standard", description: "класична версія для відновлення" }
+        ],
+        link: "https://www.miseenscene.com/kr/ko/product/perfect-3min-salon-pack.html",
+        imageUrl: "/mise-mask.jpg",
+        imageAlt: "mise en scene hair mask"
+      },
+      {
+        id: 2,
+        name: "Lador Hair Oil",
+        description:
+          "легка олія для блиску та гладкості. Додає ефект “glass hair”, не обтяжує та підкреслює текстуру волосся.",
+        variants: [
+          { name: "Standard", description: "фінішний догляд" }
+        ],
+        link: "https://en.lador.co.kr/product/perfumed-hair-oil-30ml/317/category/85/display/1/",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655873/zxutlq4fmo8g0s2yvfyk.jpg",
+        imageAlt: "lador hair oil"
+      },
+      {
+        id: 3,
+        name: "Dr. For Hair Sea Salt Scaler",
+        description:
+          "соляний скраб для шкіри голови. Очищує, освіжає та створює відчуття чистоти після салонної процедури.",
+        variants: [
+          { name: "Sea Salt", description: "глибоке очищення шкіри голови" }
+        ],
+        link: "https://global.oliveyoung.com/product/detail?prdtNo=GA210003214&srsltid=AfmBOorJlLkvYESLi741lgtLTDo6iQm0Pq8D4JYDX6JnI1KGxeEzk-oa",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771656288/bwfoc6rkaz6zjolhhfai.jpg",
+        imageAlt: "dr for hair sea salt scaler"
+      },
+      {
+        id: 4,
+        name: "Tangle Angel Brush",
+        description:
+          "мінімалістичний гребінець для акуратного розчісування після догляду. Об'єкт ритуалу.",
+        variants: [
+          { name: "Clear", description: "прозора естетика" }
+        ],
+        link: "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000152711&utm_source=google&utm_medium=shopping_search&utm_campaign=onpro_emnet_googlepmax_25_0101_1231&utm_term=&_CAD=google_pmax&gad_source=1&gad_campaignid=19622638980&gbraid=0AAAAADKpDR4d0PBDy9dPHszhJS55hR7yo&gclid=Cj0KCQiAqeDMBhDcARIsAJEbU9T_idnee0I0XQbFsZ_Wi5Ojrp_YUeuORGXd_1S2F63Z-FeeFslYeGkaAkl-EALw_wcB",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771656867/lqyizcvx74fyn9k1bhpi.png",
+        imageAlt: "tangle angel brush"
+      },
+      {
+        id: 5,
+        name: "Silk Night Scrunchie",
+        description:
+          "м’яка шовкова або сатинова резинка для нічного догляду. Без заломів. Без поспіху.",
+        variants: [
+          { name: "Black", description: "класичний нічний варіант" },
+          { name: "Gray", description: "теплий мінімалізм" }
+        ],
+        link: "http://m.108seoul.com/product/scrunchiehairband-108-mtmgraysmall/1084/category/103/display/1/",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771657364/vunubwghjxxx9ph7nyiq.jpg",
+        imageAlt: "silk scrunchie"
+      }
+    ]
+  },
+  {
+    id: 5,
+    video: "1V4yEpbc-z0",
+    name: "Seoul Cherry Blossom",
+    boxPrice: 1600,
+    description:
+      "Seoul Cherry Blossom — це короткий сезон, коли Сеул стає м’яким. Ранкове світло, пелюстки на плечах і відчуття нового початку.",
+
+    story: [
+      {
+        kicker: "Seoul memo / entry 005",
+        title: "Seoul Cherry Blossom",
+        lines: [
+          "Сеул. Квітень.",
+          "Світло м’якше, ніж учора.",
+          "Дерева починають світитися."
+        ]
+      },
+    ],
+
+    items: [
+      {
+        id: 1,
+        name: "Shea Butter and Macadamia Pure Hand Cream (1 аромат)",
+        description:
+          "легкий крем для рук із весняним ароматом сакури. Швидко вбирається, не залишає жирного фінішу — просто чиста ніжність.",
+        variants: [{ name: "Cherry Blossom", description: "квітковий, легкий аромат" }],
+        link: "https://www.coupang.com/vp/products/6847660738?itemId=19037894785&vendorItemId=86161748132&q=cherry+blossom+kundal&searchId=7cd719c31406854&sourceType=search&itemsCount=36&searchRank=2&rank=2&traceId=mlw41k40",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771665525/zytsxecpelawv3elyumk.jpg",
+        imageAlt: "sakura hand cream"
+      },
+      {
+        id: 2,
+        name: "Klavuu Actress Backstage Peel Off Glow Mask",
+        description:
+          "преміальна корейська маска-плівка для глибокого очищення, зволоження та сяйва шкіри",
+        variants: [
+          { name: "Glow", description: "м’яке сяйво" },
+        ],
+        link: "https://en.koreanbeautyshopeu.com/product-page/klavuu-actress-backstage-peel-off-glow-mask",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771665852/kustqt4dqbjlehl2q3iz.jpg",
+        imageAlt: "korean glow mask"
+      },
+      {
+        id: 3,
+        name: "Rom&nd Lip Tint",
+        description:
+          "корейський тінт, який виглядає природно: не ‘макіяж’, а настрій. Той самий напівпрозорий відтінок під сакуру.",
+        variants: [
+          { name: "Peony Ballet", description: "теплий весняний корал" },
+          { name: "Nutty Vague", description: "теплий бежевий" },
+          { name: "Cream Bebe", description: "світлий рожевий" },
+          { name: "Cream Beans", description: "м’який бежевий" }
+        ],
+        link: "https://global.oliveyoung.com/product/detail?prdtNo=GA231221443&srsltid=AfmBOoqmiR1VVJm7WZTHi4b-_-GD0T1wWJMamv91PAUulQewdEkjrKPI",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771667118/nsi4qrcrbgselmvm9lrq.webp",
+        imageAlt: "romand lip tint"
+      },
+      {
+        id: 4,
+        name: "OSULLOC Jeju Matcha Milk Tea 5ea",
+        description:
+          "легкий чайний бленд для весняного ритуалу.",
+        variants: [
+          { name: "Matcha", description: "свіжий, трав’янистий" },
+        ],
+        link: "https://global.oliveyoung.com/product/detail?prdtNo=GA251235618",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771666525/zx9xjgt7j62kcisnwvob.webp",
+        imageAlt: "sakura tea"
+      },
+      {
+        id: 5,
+        name: "Knitted headscarf",
+        description:
+          "мила плетена міні-хустинка — зараз суперпопулярний корейський аксесуар. Її хочеться зав’язати на волосся, сумку або шию — як маленький знак весни.",
+        variants: [
+          { name: "Custom", description: "Разом з вами ми знайдемо варіант, який точно вам сподобається" },
+        ],
+        link: "https://www.coupang.com/vp/products/9294712388?itemId=27530553506&vendorItemId=94495169237&sourceType=SDP_MID_CAROUSEL_2&clickEventId=3813cca0-0f09-11f1-a698-ece3f1499fce&templateId=7303",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771666904/pdnbhl7stmybaejd6e5w.png",
+        imageAlt: "knitted headscarf"
       }
     ]
   }

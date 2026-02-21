@@ -6,7 +6,7 @@ type Props = {
 
 export function YouTubeBackground({ videoId }: Props) {
   // autoplay працює лише з muted=1
-  const src = `https://www.youtube-nocookie.com/embed/${videoId}?start=75&autoplay=1&mute=1&controls=0&loop=1&playlist=${videoId}&modestbranding=1&rel=0&playsinline=1&iv_load_policy=3&disablekb=1`;
+  const src = `https://www.youtube-nocookie.com/embed/${videoId}?start=320&autoplay=1&mute=1&controls=0&loop=1&playlist=${videoId}&modestbranding=1&rel=0&playsinline=1&iv_load_policy=3&disablekb=1`;
 
   return (
     <div className="bgWrap" aria-hidden="true">

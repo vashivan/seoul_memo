@@ -53,10 +53,6 @@ export default async function Page() {
           Це curated-досвід міста, який зібрано вручну.
         </p>
 
-        <p className={styles.micro}>
-          куплено офлайн · зібрано вручну · для вас в сеулі
-        </p>
-
         {/* primary CTA */}
         <div className={styles.actions}>
           <Link href="#boxes" className={styles.primaryBtn}>
@@ -66,6 +62,10 @@ export default async function Page() {
             Як це працює
           </Link>
         </div>
+
+        <p className={styles.micro}>
+          куплено офлайн · зібрано вручну · для вас в сеулі
+        </p>
 
         {/* boxes */}
         <section id="boxes" className={styles.boxes}>
@@ -80,7 +80,7 @@ export default async function Page() {
                 <div className={styles.boxDesc}>
                   {box.description}
                 </div>
-                <Link href={box.slug} className={styles.cardBtn}>
+                <Link href={`/box/${box.slug}`} className={styles.cardBtn}>
                   Подивитись бокс →
                 </Link>
               </div>

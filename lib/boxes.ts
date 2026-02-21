@@ -21,6 +21,7 @@ export async function getBoxBySlug(slug: string): Promise<Box | null> {
   // ⬇️ мапимо під твій фронтовий тип Box
   return {
     id: dbBox.id,
+    slug: dbBox.slug,
     video: dbBox.video,
     name: dbBox.name,
     boxPrice: dbBox.boxPrice,
