@@ -24,7 +24,7 @@ export const boxes = [
           { name: "04 Rare Plum", description: "сливовий нюд" },
         ],
         link: "https://global.oliveyoung.com/product/detail?prdtNo=GA250732642&srsltid=AfmBOorbUJ8KCvOyY1bqXT0W4LkxetGx8zdjSw_e4pXyqJr95yVdGT3i",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655875/jnhcauhjxrsxklyzgdzv.jpg",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771750472/k31izkck8mjfe9lvluud.png",
         imageAlt: "lip serum"
       },
       {
@@ -38,7 +38,7 @@ export const boxes = [
           { name: "Osmanthus Blanc", description: "теплий, чистий, спокійний" },
         ],
         link: "https://global.oliveyoung.com/display/page/brand-page?brandNo=B00121&srsltid=AfmBOooO8HyUNwzlPa-unCdqzUVLw7fZ5fmwBOK8cRHaN3a-tpe0jDGu",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655878/nlyvoi7topcukt1wqhc3.jpg",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771739419/i58zunmxxd3hcfhcmcfy.png",
         imageAlt: "body mist"
       },
       {
@@ -49,7 +49,7 @@ export const boxes = [
           { name: "Slow Down", description: "musk, muguet, vanilla" },
         ],
         link: "https://global.oliveyoung.com/display/page/brand-page?brandNo=B00617&srsltid=AfmBOopVgIrpJUZbFsB7oC8p5dM48wGrRPUyHkv1AHX0GpnzNaaoBB4f",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655874/bn0zakg8sprcyfeuccgz.png",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771739420/ngryhts7ywa9rfa9v9cr.png",
         imageAlt: "hand cream"
       },
       {
@@ -61,7 +61,7 @@ export const boxes = [
           { name: "Strawberry & Kiwi", description: "ківі-полуниця, смачне поєднання поєднання" },
         ],
         link: "https://global.oliveyoung.com/display/page/brand-page?brandNo=B00136&srsltid=AfmBOoqqfiK6P3ML9O2tYvnQPycfTpgEtcsxVwV3lyTY5NcTIPTnyqjq",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655872/b7lhpzh2pqghe3mz6fwf.jpg",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771750588/qtonbr4ekio9zaf8xjhd.png",
         imageAlt: "kombucha"
       },
       {
@@ -72,7 +72,7 @@ export const boxes = [
           { name: "Standard", description: "універсальний розмір і дизайн" },
         ],
         link: "https://avamhome.com/product/detail.html?product_no=2861&cate_no=523&display_group=1",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655869/irpiwz9aiaowozmss85z.jpg",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771739419/g5kzfberpcugybbvru30.png",
         imageAlt: "bag"
       },
     ],
@@ -105,7 +105,7 @@ export const boxes = [
           { name: "Standard", description: "для чутливої та втомленої шкіри" }
         ],
         link: "https://global.oliveyoung.com/product/detail?prdtNo=GA250228767&srsltid=AfmBOoo6j0XAmEcQTglPyqekWy5bLKiJ7OPzcVxiPqo4qPQRKGaFYLEX",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655877/cvvde6ancays7wucexdx.webp",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771751640/n1a0bbhdgj4tyy5oopjt.png",
         imageAlt: "purito oat calming gel cream"
       },
       {
@@ -118,7 +118,7 @@ export const boxes = [
           { name: "Calming", description: "заспокійливий ефект" }
         ],
         link: "https://global.oliveyoung.com/product/detail?prdtNo=GA250430292&dataSource=search_result",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655881/q3x23hq13m1iakskgatv.webp",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771739420/nd5rbjzrmb7bhp1vwkgk.png",
         imageAlt: "sheet mask"
       },
       {
@@ -133,7 +133,7 @@ export const boxes = [
           { name: "Mint Choco", description: "для тих, хто любить експерименти" }
         ],
         link: "https://global.oliveyoung.com/product/detail?prdtNo=GA210811541&dataSource=search_result",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655875/scmithddt665eot5isnj.webp",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771739419/ncf6is4cbeiqjimkf5qx.png",
         imageAlt: "night lip balm"
       },
       {
@@ -145,7 +145,7 @@ export const boxes = [
           { name: "Late night sex", description: "аромат, що заспокоює краще ніж будь-що" }
         ],
         link: "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000144464&utm_source=google&utm_medium=shopping_search&utm_campaign=onpro_emnet_googlepmax_25_0101_1231&utm_term=&_CAD=google_pmax&gad_source=1&gad_campaignid=19622638980&gbraid=0AAAAADKpDR4HsbbJ_6EeQ9dmLKbPvaDH6&gclid=Cj0KCQiA18DMBhDeARIsABtYwT2sn9JLRp1Cj2gwgIGKHFzD5KOQkjB19GqnnGamhzV4SctkM-AybOYaAg0KEALw_wcB&tab=product-info",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655871/qw8jhdd484p2jiw4znpc.webp",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771739419/hwhmllss9j3ltuf7ia1w.png",
         imageAlt: "minimal candle"
       },
       {
@@ -157,7 +157,7 @@ export const boxes = [
           { name: "Набір", description: "набір з п`яти шкарпеток для сну" }
         ],
         link: "#",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655881/q3x23hq13m1iakskgatv.webp",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771739420/zcgejnbgyymjj3m13t2s.png",
         imageAlt: "sleep socks"
       }
     ]
@@ -193,7 +193,7 @@ export const boxes = [
           { name: "Carbonara", description: "гостро-кремова версія" }
         ],
         link: "#",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655870/y89nfiubrsmvls6xz6tc.webp",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771739419/l4jesxtnkwhhyy1bpehc.png",
         imageAlt: "buldak ramen"
       },
       {
@@ -205,7 +205,7 @@ export const boxes = [
           { name: "Classic", description: "традиційний смак" }
         ],
         link: "#",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655880/azl0o2vejnbyielqdi8n.png",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771739420/fbjcr3x7s5cpmf3l9itw.png",
         imageAlt: "yopokki cup"
       },
       {
@@ -217,7 +217,7 @@ export const boxes = [
           { name: "Original", description: "класичний смак" }
         ],
         link: "#",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655871/p4cvekkt6ve31cku9qm3.webp",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771739420/rigd6hptfqpwp114rvv2.png",
         imageAlt: "korean mochi cookie"
       },
       {
@@ -231,7 +231,7 @@ export const boxes = [
           { name: "secret choose", description: "таємний вибір, здивуйте мене" }
         ],
         link: "#",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655876/rx90fbv9rnlp7bbc1bg8.jpg",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771751991/ldhesuhfbnmultaabb97.png",
         imageAlt: "korean drink can"
       },
       {
@@ -243,7 +243,7 @@ export const boxes = [
           { name: "Standard", description: "мінімалістичний сет" }
         ],
         link: "#",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655877/dgmnw3h9okgvghglxtr7.webp",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771752081/sdgsqyjom0cqebyzffy6.png",
         imageAlt: "korean ramen pot"
       }
     ]
@@ -277,8 +277,8 @@ export const boxes = [
         variants: [
           { name: "Standard", description: "класична версія для відновлення" }
         ],
-        link: "https://www.miseenscene.com/kr/ko/product/perfect-3min-salon-pack.html",
-        imageUrl: "/mise-mask.jpg",
+        link: "#",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771754513/qvipjqxucfzl6eoyfftm.png",
         imageAlt: "mise en scene hair mask"
       },
       {
@@ -290,7 +290,7 @@ export const boxes = [
           { name: "Standard", description: "фінішний догляд" }
         ],
         link: "https://en.lador.co.kr/product/perfumed-hair-oil-30ml/317/category/85/display/1/",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771655873/zxutlq4fmo8g0s2yvfyk.jpg",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771739419/lxsgkh3lko1wnkopo3w1.png",
         imageAlt: "lador hair oil"
       },
       {
@@ -302,7 +302,7 @@ export const boxes = [
           { name: "Sea Salt", description: "глибоке очищення шкіри голови" }
         ],
         link: "https://global.oliveyoung.com/product/detail?prdtNo=GA210003214&srsltid=AfmBOorJlLkvYESLi741lgtLTDo6iQm0Pq8D4JYDX6JnI1KGxeEzk-oa",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771656288/bwfoc6rkaz6zjolhhfai.jpg",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771752320/hw6pyabvkqv3yl2jms56.png",
         imageAlt: "dr for hair sea salt scaler"
       },
       {
@@ -314,7 +314,7 @@ export const boxes = [
           { name: "Clear", description: "прозора естетика" }
         ],
         link: "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000152711&utm_source=google&utm_medium=shopping_search&utm_campaign=onpro_emnet_googlepmax_25_0101_1231&utm_term=&_CAD=google_pmax&gad_source=1&gad_campaignid=19622638980&gbraid=0AAAAADKpDR4d0PBDy9dPHszhJS55hR7yo&gclid=Cj0KCQiAqeDMBhDcARIsAJEbU9T_idnee0I0XQbFsZ_Wi5Ojrp_YUeuORGXd_1S2F63Z-FeeFslYeGkaAkl-EALw_wcB",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771656867/lqyizcvx74fyn9k1bhpi.png",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771752496/pwnxglnacfqaphrhtg5q.png",
         imageAlt: "tangle angel brush"
       },
       {
@@ -327,7 +327,7 @@ export const boxes = [
           { name: "Gray", description: "теплий мінімалізм" }
         ],
         link: "http://m.108seoul.com/product/scrunchiehairband-108-mtmgraysmall/1084/category/103/display/1/",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771657364/vunubwghjxxx9ph7nyiq.jpg",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771752576/jhbw0nxqh2mszuqmlmhw.png",
         imageAlt: "silk scrunchie"
       }
     ]
@@ -360,7 +360,7 @@ export const boxes = [
           "легкий крем для рук із весняним ароматом сакури. Швидко вбирається, не залишає жирного фінішу — просто чиста ніжність.",
         variants: [{ name: "Cherry Blossom", description: "квітковий, легкий аромат" }],
         link: "https://www.coupang.com/vp/products/6847660738?itemId=19037894785&vendorItemId=86161748132&q=cherry+blossom+kundal&searchId=7cd719c31406854&sourceType=search&itemsCount=36&searchRank=2&rank=2&traceId=mlw41k40",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771665525/zytsxecpelawv3elyumk.jpg",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771752881/moyvtqh44qaus38vuufy.png",
         imageAlt: "sakura hand cream"
       },
       {
@@ -372,7 +372,7 @@ export const boxes = [
           { name: "Glow", description: "м’яке сяйво" },
         ],
         link: "https://en.koreanbeautyshopeu.com/product-page/klavuu-actress-backstage-peel-off-glow-mask",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771665852/kustqt4dqbjlehl2q3iz.jpg",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771752940/nwoi2l4uijrdfabynsdt.png",
         imageAlt: "korean glow mask"
       },
       {
@@ -387,7 +387,7 @@ export const boxes = [
           { name: "Cream Beans", description: "м’який бежевий" }
         ],
         link: "https://global.oliveyoung.com/product/detail?prdtNo=GA231221443&srsltid=AfmBOoqmiR1VVJm7WZTHi4b-_-GD0T1wWJMamv91PAUulQewdEkjrKPI",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771667118/nsi4qrcrbgselmvm9lrq.webp",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771752765/pxxaozzyyq17vlflevdf.png",
         imageAlt: "romand lip tint"
       },
       {
@@ -399,7 +399,7 @@ export const boxes = [
           { name: "Matcha", description: "свіжий, трав’янистий" },
         ],
         link: "https://global.oliveyoung.com/product/detail?prdtNo=GA251235618",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771666525/zx9xjgt7j62kcisnwvob.webp",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771753032/vrpblvzdjdmfpk9iirnv.png",
         imageAlt: "sakura tea"
       },
       {

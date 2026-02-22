@@ -14,7 +14,7 @@ function Scene({ lines, title, kicker }: { lines: string[]; title?: string; kick
       <motion.div
         className="sceneInner"
         variants={fadeUp}
-        initial="hidden"
+        initial="show"
         whileInView="show"
         viewport={{ amount: 0.6, once: true }}
         transition={{ duration: 0.7, ease: "easeOut" }}

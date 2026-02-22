@@ -1,97 +1,160 @@
-import { YouTubeBackground } from "@/components/YouTubeBackground";
 import Link from "next/link";
-import styles from "../styles/MainPage.module.scss";
-import Footer from "@/components/Footer";
+import Image from "next/image";
+import { notFound } from "next/navigation";
+import styles from "../styles/HomeCommercial.module.scss";
 import { prisma } from "@/lib/prisma";
+import { getBoxBySlug } from "@/lib/boxes";
+import { YouTubeBackground } from "@/components/YouTubeBackground";
 
 export default async function Page() {
   const boxes = await prisma.box.findMany({
-    select: {
-      id: true,
-      slug: true,
-      video: true,
-      name: true,
-      boxPrice: true,
-      description: true,
-      createdAt: true,
-      updatedAt: true
-    }
+    select: { slug: true },
   });
+
+  if (!boxes.length) return notFound();
+
+  const randomBox = boxes[Math.floor(Math.random() * boxes.length)];
+  const box = await getBoxBySlug(randomBox.slug);
+
+  if (!box) return notFound();
 
   return (
     <main className={styles.main}>
-      <YouTubeBackground videoId="D-F4L5Gfhik" />
-
-      {/* overlay */}
+      {/* background layers */}
+      <div className={styles.bg}>
+        <YouTubeBackground videoId={box.video} />
+      </div>
       <div className={styles.overlay} />
 
       {/* content */}
-      <div className={styles.content}>
-        <div className={styles.badge}>Seoul memo</div>
+      <div className={styles.page}>
+        {/* HERO */}
+        <section className={styles.hero}>
+          <div className={styles.heroContent}>
+            <div className={styles.kicker}>Seoul memo</div>
 
-        <h1 className={styles.h1}>
-          Атмосфера Сеулу — в боксі.
-          <br />
-          Обери сцену, яку хочеш відчути.
-        </h1>
+            <h1 className={styles.h1}>{box.name}.box</h1>
 
-        {/* meta links */}
-        <div className={styles.metaRow}>
-          {/* <Link href="/order" className={styles.metaLink}>
-            Перед замовленням — прочитати
-          </Link> */}
-          {/* <span className={styles.dot}>•</span> */}
-          <Link href="/about" className={styles.metaLink}>
-            Про Seoul memo
-          </Link>
-        </div>
+            <p className={styles.sub}>
+              {box.description}
+              <br />
+              Зібрано вручну. Доставка в Україну 7–14 днів.
+            </p>
 
+            <div className={styles.badges}>
+              <span className={styles.badge}>-Куплено офлайн в Сеулі-</span>
+              <span className={styles.badge}>-Обмежена кількість-</span>
+              <span className={styles.badge}>-Відправка поштою-</span>
+            </div>
 
-        <p className={styles.p}>
-          Це не сувенір і не випадковий набір речей.
-          <br />
-          Це curated-досвід міста, який зібрано вручну.
-        </p>
+            <div className={styles.actions}>
+              <Link href={`/box/${box.slug}`} className={styles.primaryBtn}>
+                Замовити зараз
+              </Link>
 
-        {/* primary CTA */}
-        <div className={styles.actions}>
-          <Link href="#boxes" className={styles.primaryBtn}>
-            Обрати бокс →
-          </Link>
-          <Link href="/order" className={styles.secondaryBtn}>
-            Як це працює
-          </Link>
-        </div>
+              <Link href="#inside" className={styles.secondaryBtn}>
+                Що всередині
+              </Link>
+            </div>
 
-        <p className={styles.micro}>
-          куплено офлайн · зібрано вручну · для вас в сеулі
-        </p>
+            <div className={styles.stock}>Залишилось 18 боксів</div>
+          </div>
+        </section>
 
-        {/* boxes */}
-        <section id="boxes" className={styles.boxes}>
-          {boxes.map((box, index) => (
-            <div key={index}>
-              <div className={styles.boxCard} key={box.id}>
-                <div className={styles.boxTop}>
-                  <div className={styles.boxName}>{box.name}</div>
-                  <div className={styles.boxPrice}>{box.boxPrice} ₴</div>
+        {/* WHAT'S INSIDE */}
+        <section id="inside" className={styles.inside}>
+          <div className={styles.sectionHead}>
+            <h2 className={styles.h2}>Що входить у бокс</h2>
+            <p className={styles.sectionSub}>Кожен елемент — частина сцени. Нічого випадкового.</p>
+          </div>
+
+          <ul className={styles.itemsGrid}>
+            {box.items.map((item, index) => (
+              <li className={styles.itemCard} key={`${item.name}-${index}`}>
+                <div className={styles.itemTop}>
+                  <p className={styles.itemName}>{item.name}</p>
+                  {item.imageUrl ? (
+                    <div className={styles.itemImageWrap}>
+                      <Image
+                        src={item.imageUrl}
+                        alt={item.imageAlt || item.name}
+                        fill
+                        sizes="(max-width: 768px) 90vw, 320px"
+                        className={styles.itemImage}
+                      />
+                    </div>
+                  ) : null}
                 </div>
 
-                <div className={styles.boxDesc}>
-                  {box.description}
-                </div>
-                <Link href={`/box/${box.slug}`} className={styles.cardBtn}>
-                  Подивитись бокс →
+                <p className={styles.itemDesc}>{item.description}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* TRUST */}
+        <section className={styles.trust}>
+          <div className={styles.sectionHead}>
+            <h2 className={styles.h2}>Чому це не просто сувенір?</h2>
+          </div>
+
+          <div className={styles.trustBox}>
+            <p className={styles.trustText}>
+              Я живу в Сеулі та особисто купую кожну річ офлайн — в Olive Young, локальних магазинах і невеликих просторах. Намагаючись відшукати саме корейські автентичні бренди, щоб познайомити людей з ними. 
+              Це не масмаркет і не random набір. Це curated-настрій, зібраний руками.
+            </p>
+
+            <div className={styles.trustMini}>
+              {/* <div className={styles.trustPill}>Оплата перед відправкою</div>
+              <div className={styles.trustPill}>Трек-номер після відправки</div>
+              <div className={styles.trustPill}>Пакування як подарунок</div> */}
+              <div className={styles.trustPill}>
+                <Link href="/about" target="_blank">
+                  Про проєкт Seoul Memo
                 </Link>
               </div>
             </div>
-          ))}
+          </div>
         </section>
 
-        {/* micro CTA */}
-        <div className="mt-15">
-          <Footer />
-        </div>
+        {/* HOW */}
+        <section className={styles.how}>
+          <div className={styles.sectionHead}>
+            <h2 className={styles.h2}>Як відбувається замовлення</h2>
+          </div>
+
+          <div className={styles.steps}>
+            <div className={styles.step}>
+              <div className={styles.stepNum}>1</div>
+              <div className={styles.stepText}>Оформлюєш замовлення</div>
+            </div>
+            <div className={styles.step}>
+              <div className={styles.stepNum}>2</div>
+              <div className={styles.stepText}>Я збираю бокс у Сеулі</div>
+            </div>
+            <div className={styles.step}>
+              <div className={styles.stepNum}>3</div>
+              <div className={styles.stepText}>Відправляю в Україну</div>
+            </div>
+            <div className={styles.step}>
+              <div className={styles.stepNum}>4</div>
+              <div className={styles.stepText}>Ти отримуєш атмосферу</div>
+            </div>
+          </div>
+        </section>
+
+        {/* FINAL CTA */}
+        <section className={styles.final}>
+          <h2 className={styles.finalTitle}>Наступна відправка — 15 березня</h2>
+          <p className={styles.finalSub}>Pre-order до 5 березня</p>
+
+          <Link href={`/box/${box.slug}`} className={styles.primaryBtnLarge}>
+            Замовити {box.name}.box — 2300 ₴
+          </Link>
+          <Link href="/boxes" className={styles.secondaryBtnLarge}>
+            Подивитися інші бокси
+          </Link>
+        </section>
       </div>
     </main>
   );

@@ -30,7 +30,7 @@ export default function OrderBlock({
           sizes="(max-width: 860px) 92vw, 980px"
           priority={false}
         />
-        <div className="blockMediaFade" />
+        {/* <div className="blockMediaFade" /> */}
         <div className="blockMediaLabel">{item.imageAlt}</div>
       </div>
 

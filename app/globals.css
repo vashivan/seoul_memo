@@ -240,10 +240,14 @@ body {
 
 .orderBlock{
   border-radius: 18px;
-  padding: 18px;
+  padding-inline: 5px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 12px;
+
+  @media (min-width: 680px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .blockHead{
@@ -265,6 +269,7 @@ body {
   margin: 0 0 12px 0;
   font-size: 22px;
   opacity: 0.75;
+  text-align: justify;
   grid-column: span 2;
 }
 
@@ -277,7 +282,13 @@ body {
 .optGrid{
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  grid-row: 4;
   gap: 8px;
+
+  @media (min-width: 680px) {
+    grid-row: 3;
+    grid-column: 2;
+  }
 }
 
 .optCard{
@@ -407,8 +418,6 @@ body {
   overflow: hidden;
   height: 400px;
   width: auto;
-  background: rgba(255,255,255,0.35);
-  opacity: 0.8;
 
   @media (min-widht: 860px) {
     height: 650px
@@ -417,7 +426,7 @@ body {
 
 
 .blockMedia img{
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .blockMediaFade{
