@@ -26,7 +26,7 @@ export default async function Page() {
               {box.items[0]?.imageUrl && (
                 <div className={styles.imageWrap}>
                   <Image
-                    src={box.items[0].imageUrl}
+                    src={box.boxImg || ""}
                     alt={box.name}
                     fill
                     className={styles.image}

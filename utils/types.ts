@@ -3,6 +3,7 @@ export type Box = {
   video: string,
   name: string;
   slug: string;
+  boxImg: string;
   boxPrice: number;
   description?: string;
   story: scene[];

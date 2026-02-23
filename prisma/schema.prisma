@@ -14,68 +14,69 @@ datasource db {
 }
 
 model Box {
-  id          Int     @id @default(autoincrement())
-  slug        String  @unique
+  id          Int    @id @default(autoincrement())
+  slug        String @unique
   video       String
   name        String
+  boxImg      String?
   boxPrice    Int
-  description String  @db.Text
+  description String @db.Text
 
   storySlides StorySlide[]
   items       BoxItem[]
 
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 model StorySlide {
-  id      Int   @id @default(autoincrement())
-  boxId   Int
-  order   Int
-  kicker  String?
-  title   String?
+  id     Int     @id @default(autoincrement())
+  boxId  Int
+  order  Int
+  kicker String?
+  title  String?
 
-  box     Box   @relation(fields: [boxId], references: [id], onDelete: Cascade)
-  lines   StoryLine[]
+  box   Box         @relation(fields: [boxId], references: [id], onDelete: Cascade)
+  lines StoryLine[]
 
   @@unique([boxId, order])
 }
 
 model StoryLine {
-  id      Int @id @default(autoincrement())
+  id      Int    @id @default(autoincrement())
   slideId Int
   order   Int
   text    String @db.Text
 
-  slide   StorySlide @relation(fields: [slideId], references: [id], onDelete: Cascade)
+  slide StorySlide @relation(fields: [slideId], references: [id], onDelete: Cascade)
 
   @@unique([slideId, order])
 }
 
 model BoxItem {
-  id          Int @id @default(autoincrement())
+  id          Int     @id @default(autoincrement())
   boxId       Int
   order       Int
   name        String
-  description String @db.Text
+  description String  @db.Text
   link        String?
   imageUrl    String?
   imageAlt    String?
 
-  box         Box @relation(fields: [boxId], references: [id], onDelete: Cascade)
-  variants    ItemVariant[]
+  box      Box           @relation(fields: [boxId], references: [id], onDelete: Cascade)
+  variants ItemVariant[]
 
   @@unique([boxId, order])
 }
 
 model ItemVariant {
-  id          Int @id @default(autoincrement())
+  id          Int     @id @default(autoincrement())
   itemId      Int
   order       Int
   name        String
   description String?
 
-  item        BoxItem @relation(fields: [itemId], references: [id], onDelete: Cascade)
+  item BoxItem @relation(fields: [itemId], references: [id], onDelete: Cascade)
 
   @@unique([itemId, order])
 }

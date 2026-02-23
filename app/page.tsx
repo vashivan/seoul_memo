@@ -7,15 +7,7 @@ import { getBoxBySlug } from "@/lib/boxes";
 import { YouTubeBackground } from "@/components/YouTubeBackground";
 
 export default async function Page() {
-  const boxes = await prisma.box.findMany({
-    select: { slug: true },
-  });
-
-  if (!boxes.length) return notFound();
-
-  const randomBox = boxes[Math.floor(Math.random() * boxes.length)];
-  const box = await getBoxBySlug(randomBox.slug);
-
+  const box = await getBoxBySlug("seoul-pure-night-routine")
   if (!box) return notFound();
 
   return (
@@ -55,9 +47,11 @@ export default async function Page() {
               <Link href="#inside" className={styles.secondaryBtn}>
                 Що всередині
               </Link>
-            </div>
 
-            <div className={styles.stock}>Залишилось 18 боксів</div>
+              <Link href="/boxes" className={styles.secondaryBtn}>
+                Інші бокси
+              </Link>
+            </div>
           </div>
         </section>
 
@@ -100,7 +94,7 @@ export default async function Page() {
 
           <div className={styles.trustBox}>
             <p className={styles.trustText}>
-              Я живу в Сеулі та особисто купую кожну річ офлайн — в Olive Young, локальних магазинах і невеликих просторах. Намагаючись відшукати саме корейські автентичні бренди, щоб познайомити людей з ними. 
+              Я живу в Сеулі та особисто купую кожну річ офлайн — в Olive Young, локальних магазинах і невеликих просторах. Намагаючись відшукати саме корейські автентичні бренди, щоб познайомити людей з ними.
               Це не масмаркет і не random набір. Це curated-настрій, зібраний руками.
             </p>
 
