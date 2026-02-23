@@ -24,6 +24,7 @@ export async function getBoxBySlug(slug: string): Promise<Box | null> {
     slug: dbBox.slug,
     video: dbBox.video,
     name: dbBox.name,
+    boxImg: dbBox.boxImg ?? "",
     boxPrice: dbBox.boxPrice,
     description: dbBox.description,
     story: dbBox.storySlides.map((s) => ({

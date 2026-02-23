@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import styles from "../styles/HomeCommercial.module.scss";
-import { prisma } from "@/lib/prisma";
 import { getBoxBySlug } from "@/lib/boxes";
 import { YouTubeBackground } from "@/components/YouTubeBackground";
 

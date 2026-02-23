@@ -36,6 +36,7 @@ async function main() {
         slug,
         video: box.video,
         name: box.name,
+        boxImg: box.boxImg,
         boxPrice: box.boxPrice,
         description: box.description,
 
