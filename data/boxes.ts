@@ -3,7 +3,8 @@ export const boxes = [
     id: 1,
     video: "nOSQvWGFzWo",
     name: "Seoul sunset",
-    boxPrice: 2300,
+    boxImg: "https://res.cloudinary.com/dkchysebn/image/upload/v1771861318/awchp7dqz78h4rgrefvq.jpg",
+    boxPrice: 1700,
     description: "Seoul sunset — це curated-бокс із Сеулу. Ми зібрали відчуття вечора в місті — у речах, яких хочеться торкатися та користуватися.",
     story: [
       {
@@ -63,24 +64,14 @@ export const boxes = [
         link: "https://global.oliveyoung.com/display/page/brand-page?brandNo=B00136&srsltid=AfmBOoqqfiK6P3ML9O2tYvnQPycfTpgEtcsxVwV3lyTY5NcTIPTnyqjq",
         imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771750588/qtonbr4ekio9zaf8xjhd.png",
         imageAlt: "kombucha"
-      },
-      {
-        id: 5,
-        name: "Тканинна сумка для найнеобхіднішого",
-        description: "Екологічна сумка з приємного матеріалу для щоденного використання.",
-        variants: [
-          { name: "Standard", description: "універсальний розмір і дизайн" },
-        ],
-        link: "https://avamhome.com/product/detail.html?product_no=2861&cate_no=523&display_group=1",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771739419/g5kzfberpcugybbvru30.png",
-        imageAlt: "bag"
-      },
+      }
     ],
   },
   {
     id: 2,
     video: "NE8qBVTsxB4",
     name: "Seoul Pure Night Routine",
+    boxImg: "https://res.cloudinary.com/dkchysebn/image/upload/v1771861032/bfum6zszijx8ocszogcw.jpg",
     boxPrice: 2600,
     description:
       "Pure Seoul Night — це тиха ніч для себе. Ніч без шуму, без зайвого світла. Лише м’який догляд, теплий вогонь і спокій, який залишається з тобою.",
@@ -166,6 +157,7 @@ export const boxes = [
     id: 3,
     video: "uAtzy8u2MYk",
     name: "Seoul Mugbang",
+    boxImg: "https://res.cloudinary.com/dkchysebn/image/upload/v1771861032/ctr1whfaduhngok7cgip.jpg",
     boxPrice: 2200,
     description:
       "Seoul Mugbang — це коли ти не поспішаєш. Лапша запарюється. Неон відбивається у вікні. Місто гуде десь далеко, але тут — тільки ти і твій стіл.",
@@ -252,6 +244,7 @@ export const boxes = [
     id: 4,
     video: "cIOTHiydsJM",
     name: "Seoul Glass Hair",
+    boxImg: "https://res.cloudinary.com/dkchysebn/image/upload/v1771861032/d4kkcizazcpxs6kahavt.jpg",
     boxPrice: 2400,
     description:
       "Seoul Glass Hair — це тиха ванна кімната після душу. Тепла пара. Крапля олії на долоні. Місто за вікном живе своїм життям, але тут — тільки ти і твій ритуал.",
@@ -271,27 +264,27 @@ export const boxes = [
     items: [
       {
         id: 1,
-        name: "Mise-en-scène Perfect 3 Minute Salon Mask",
+        name: "Curly Shyll Mask",
         description:
-          "інтенсивна 3-хвилинна маска для швидкого відновлення волосся. Живить, згладжує та повертає блиск. Ефект салону вдома — без зайвих кроків.",
+          "інтенсивна маска для швидкого відновлення волосся. Живить, згладжує та повертає блиск. Ефект салону вдома — без зайвих кроків.",
         variants: [
           { name: "Standard", description: "класична версія для відновлення" }
         ],
-        link: "#",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771754513/qvipjqxucfzl6eoyfftm.png",
-        imageAlt: "mise en scene hair mask"
+        link: "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000245699&t_page=%ED%86%B5%ED%95%A9%EA%B2%80%EC%83%89%EA%B2%B0%EA%B3%BC%ED%8E%98%EC%9D%B4%EC%A7%80&t_click=%EA%B2%80%EC%83%89%EC%83%81%ED%92%88%EC%83%81%EC%84%B8&t_search_name=curly%20shyll&t_number=1&dispCatNo=1000001000400070005&trackingCd=Result_1",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771932163/rovxm04jsu2uluk0einz.png",
+        imageAlt: "curly shyll hair mask"
       },
       {
         id: 2,
-        name: "Lador Hair Oil",
+        name: "Moremo water treatment",
         description:
           "легка олія для блиску та гладкості. Додає ефект “glass hair”, не обтяжує та підкреслює текстуру волосся.",
         variants: [
           { name: "Standard", description: "фінішний догляд" }
         ],
-        link: "https://en.lador.co.kr/product/perfumed-hair-oil-30ml/317/category/85/display/1/",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771739419/lxsgkh3lko1wnkopo3w1.png",
-        imageAlt: "lador hair oil"
+        link: "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000223265&utm_source=google&utm_medium=shopping_search&utm_campaign=onpro_emnet_googlepmax_25_0101_1231&utm_term=&_CAD=google_pmax&gad_source=1&gad_campaignid=19622638980&gbraid=0AAAAADKpDR41zYofiTctB4yyWIIZ-RH-X&gclid=Cj0KCQiAtfXMBhDzARIsAJ0jp3DPIseWMWl03VlRe6AgTgMwpV5bTiHu9_BB5XMj1CBf2IcdHpynEEQaAlawEALw_wcB",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771931005/v8x0w4yk54hjjivtz7wb.png",
+        imageAlt: "moremo treatment"
       },
       {
         id: 3,
@@ -307,28 +300,15 @@ export const boxes = [
       },
       {
         id: 4,
-        name: "Tangle Angel Brush",
+        name: "Revive Healing Bird",
         description:
-          "мінімалістичний гребінець для акуратного розчісування після догляду. Об'єкт ритуалу.",
+          "non wash treatment for hair. Ultra shine.",
         variants: [
-          { name: "Clear", description: "прозора естетика" }
+          { name: "Clear", description: "healing bird" }
         ],
-        link: "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000152711&utm_source=google&utm_medium=shopping_search&utm_campaign=onpro_emnet_googlepmax_25_0101_1231&utm_term=&_CAD=google_pmax&gad_source=1&gad_campaignid=19622638980&gbraid=0AAAAADKpDR4d0PBDy9dPHszhJS55hR7yo&gclid=Cj0KCQiAqeDMBhDcARIsAJEbU9T_idnee0I0XQbFsZ_Wi5Ojrp_YUeuORGXd_1S2F63Z-FeeFslYeGkaAkl-EALw_wcB",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771752496/pwnxglnacfqaphrhtg5q.png",
-        imageAlt: "tangle angel brush"
-      },
-      {
-        id: 5,
-        name: "Silk Night Scrunchie",
-        description:
-          "м’яка шовкова або сатинова резинка для нічного догляду. Без заломів. Без поспіху.",
-        variants: [
-          { name: "Black", description: "класичний нічний варіант" },
-          { name: "Gray", description: "теплий мінімалізм" }
-        ],
-        link: "http://m.108seoul.com/product/scrunchiehairband-108-mtmgraysmall/1084/category/103/display/1/",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771752576/jhbw0nxqh2mszuqmlmhw.png",
-        imageAlt: "silk scrunchie"
+        link: "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000200513&t_page=%ED%86%B5%ED%95%A9%EA%B2%80%EC%83%89%EA%B2%B0%EA%B3%BC%ED%8E%98%EC%9D%B4%EC%A7%80&t_click=%EA%B2%80%EC%83%89%EC%83%81%ED%92%88%EC%83%81%EC%84%B8&t_search_name=healing%20bird&t_number=5&dispCatNo=1000001000400070005,1000001000400070006&trackingCd=Result_5",
+        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771930996/koxvfhpygt9l6tcbnzdy.png",
+        imageAlt: "treatment"
       }
     ]
   },
@@ -336,7 +316,8 @@ export const boxes = [
     id: 5,
     video: "1V4yEpbc-z0",
     name: "Seoul Cherry Blossom",
-    boxPrice: 1600,
+    boxImg: "https://res.cloudinary.com/dkchysebn/image/upload/v1771861032/dzwb8t7pcpuy4z2idtpm.jpg",
+    boxPrice: 1400,
     description:
       "Seoul Cherry Blossom — це короткий сезон, коли Сеул стає м’яким. Ранкове світло, пелюстки на плечах і відчуття нового початку.",
 
@@ -400,19 +381,7 @@ export const boxes = [
         ],
         link: "https://global.oliveyoung.com/product/detail?prdtNo=GA251235618",
         imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771753032/vrpblvzdjdmfpk9iirnv.png",
-        imageAlt: "sakura tea"
-      },
-      {
-        id: 5,
-        name: "Knitted headscarf",
-        description:
-          "мила плетена міні-хустинка — зараз суперпопулярний корейський аксесуар. Її хочеться зав’язати на волосся, сумку або шию — як маленький знак весни.",
-        variants: [
-          { name: "Custom", description: "Разом з вами ми знайдемо варіант, який точно вам сподобається" },
-        ],
-        link: "https://www.coupang.com/vp/products/9294712388?itemId=27530553506&vendorItemId=94495169237&sourceType=SDP_MID_CAROUSEL_2&clickEventId=3813cca0-0f09-11f1-a698-ece3f1499fce&templateId=7303",
-        imageUrl: "https://res.cloudinary.com/dkchysebn/image/upload/v1771666904/pdnbhl7stmybaejd6e5w.png",
-        imageAlt: "knitted headscarf"
+        imageAlt: "matcha tea"
       }
     ]
   }
