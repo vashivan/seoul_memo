@@ -6,7 +6,7 @@ import { getBoxBySlug } from "@/lib/boxes";
 import { YouTubeBackground } from "@/components/YouTubeBackground";
 
 export default async function Page() {
-  const box = await getBoxBySlug("seoul-pure-night-routine")
+  const box = await getBoxBySlug("seoul-glass-hair")
   if (!box) return notFound();
 
   return (
