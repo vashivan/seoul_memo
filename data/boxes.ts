@@ -3,7 +3,7 @@ export const boxes = [
     id: 1,
     video: "nOSQvWGFzWo",
     name: "Seoul sunset",
-    boxImg: "https://res.cloudinary.com/dkchysebn/image/upload/v1771861318/awchp7dqz78h4rgrefvq.jpg",
+    // boxImg: "https://res.cloudinary.com/dkchysebn/image/upload/v1771861318/awchp7dqz78h4rgrefvq.jpg",
     boxPrice: 1700,
     description: "Seoul sunset — це curated-бокс із Сеулу. Ми зібрали відчуття вечора в місті — у речах, яких хочеться торкатися та користуватися.",
     story: [
@@ -71,7 +71,7 @@ export const boxes = [
     id: 2,
     video: "NE8qBVTsxB4",
     name: "Seoul Pure Night Routine",
-    boxImg: "https://res.cloudinary.com/dkchysebn/image/upload/v1771861032/bfum6zszijx8ocszogcw.jpg",
+    // boxImg: "https://res.cloudinary.com/dkchysebn/image/upload/v1771861032/bfum6zszijx8ocszogcw.jpg",
     boxPrice: 2600,
     description:
       "Pure Seoul Night — це тиха ніч для себе. Ніч без шуму, без зайвого світла. Лише м’який догляд, теплий вогонь і спокій, який залишається з тобою.",
@@ -157,7 +157,7 @@ export const boxes = [
     id: 3,
     video: "uAtzy8u2MYk",
     name: "Seoul Mugbang",
-    boxImg: "https://res.cloudinary.com/dkchysebn/image/upload/v1771861032/ctr1whfaduhngok7cgip.jpg",
+    // boxImg: "https://res.cloudinary.com/dkchysebn/image/upload/v1771861032/ctr1whfaduhngok7cgip.jpg",
     boxPrice: 2200,
     description:
       "Seoul Mugbang — це коли ти не поспішаєш. Лапша запарюється. Неон відбивається у вікні. Місто гуде десь далеко, але тут — тільки ти і твій стіл.",
@@ -244,7 +244,7 @@ export const boxes = [
     id: 4,
     video: "cIOTHiydsJM",
     name: "Seoul Glass Hair",
-    boxImg: "https://res.cloudinary.com/dkchysebn/image/upload/v1771861032/d4kkcizazcpxs6kahavt.jpg",
+    // boxImg: "https://res.cloudinary.com/dkchysebn/image/upload/v1771861032/d4kkcizazcpxs6kahavt.jpg",
     boxPrice: 2400,
     description:
       "Seoul Glass Hair — це тиха ванна кімната після душу. Тепла пара. Крапля олії на долоні. Місто за вікном живе своїм життям, але тут — тільки ти і твій ритуал.",
@@ -316,7 +316,7 @@ export const boxes = [
     id: 5,
     video: "1V4yEpbc-z0",
     name: "Seoul Cherry Blossom",
-    boxImg: "https://res.cloudinary.com/dkchysebn/image/upload/v1771861032/dzwb8t7pcpuy4z2idtpm.jpg",
+    // boxImg: "https://res.cloudinary.com/dkchysebn/image/upload/v1771861032/dzwb8t7pcpuy4z2idtpm.jpg",
     boxPrice: 1400,
     description:
       "Seoul Cherry Blossom — це короткий сезон, коли Сеул стає м’яким. Ранкове світло, пелюстки на плечах і відчуття нового початку.",
