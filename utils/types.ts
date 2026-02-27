@@ -33,3 +33,12 @@ export type scene = {
   kicker?: string;
   lines: string[];
 };
+
+export type Mood = {
+  id: string;
+  label: string;
+  hint: string;
+  chosenLine: string;
+  slug: string;
+  tag: string; // короткий tag справа
+};

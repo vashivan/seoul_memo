@@ -1,0 +1,275 @@
+.page {
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+  color: rgba(255,255,255,0.92);
+  position: relative;
+}
+
+/* scroll snap like reels */
+.snap {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.section {
+  height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+  overflow: hidden;
+
+  /* критично для правильних шарів */
+  isolation: isolate;
+}
+
+/* Background image for each box section */
+.bgImage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transform: scale(1.06);
+  filter: saturate(1.02) contrast(1.02);
+}
+
+/* Intro background (делікатний “туман”) */
+.introBg {
+  position: absolute;
+  inset: -20%;
+  z-index: 0;
+  background:
+    radial-gradient(40% 35% at 25% 25%, rgba(255, 170, 120, 0.12) 0%, rgba(0,0,0,0) 55%),
+    radial-gradient(35% 30% at 75% 20%, rgba(160, 200, 255, 0.10) 0%, rgba(0,0,0,0) 60%),
+    radial-gradient(45% 40% at 50% 85%, rgba(255, 120, 200, 0.07) 0%, rgba(0,0,0,0) 55%);
+  filter: blur(44px);
+}
+
+/* overlay to make text readable */
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.12), rgba(0,0,0,0.86)),
+    radial-gradient(65% 65% at 50% 40%, rgba(0,0,0,0.08), rgba(0,0,0,0.92));
+}
+
+/* UI content layer */
+.ui {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: clamp(18px, 3vw, 28px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+
+  max-width: 740px;
+}
+
+.kicker {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(26px, 4vw, 46px);
+  line-height: 1.06;
+  font-weight: 700;
+}
+
+.desc {
+  margin: 0;
+  max-width: 62ch;
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.86;
+}
+
+.bottomRow {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  gap: 12px;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Buttons — без “стрибань” */
+.primary, .secondary {
+  border: 1px solid #ffff;
+  background: rgba(0,0,0,0.35);
+  color: #ffff;
+  padding: 12px 14px;
+
+  font-size: 16px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  transition: background 160ms ease, border-color 160ms ease, opacity 160ms ease;
+}
+
+.primary:hover, .secondary:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.22);
+}
+
+.primary:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.secondary {
+  opacity: 0.88;
+}
+
+.hint {
+  margin-top: 8px;
+  font-size: 14px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  opacity: 0.45;
+}
+
+/* Intro layout */
+.intro {
+  display: grid;
+  place-items: center;
+  padding: clamp(18px, 3vw, 36px);
+}
+
+.introInner {
+  position: relative;
+  z-index: 2;
+  width: min(820px, 100%);
+
+  background: rgba(0,0,0,0.28);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 20px 90px rgba(0,0,0,0.55);
+
+  padding: clamp(18px, 3vw, 30px);
+}
+
+.brand {
+  font-size: 16px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin-bottom: 14px;
+}
+
+.h1 {
+  font-size: clamp(30px, 4.2vw, 54px);
+  line-height: 1.02;
+  margin: 0 0 12px 0;
+  font-weight: 700;
+}
+
+.sub {
+  margin: 0 0 18px 0;
+  font-size: 16px
+}
+
+.introActions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.sep { opacity: 0.5; }
+
+/* Dots navigation */
+.dots {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.30);
+  background: rgba(255,255,255,0.08);
+  cursor: pointer;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.dot:hover {
+  background: rgba(255,255,255,0.18);
+}
+
+.dotActive {
+  background: rgba(255,255,255,0.78);
+  transform: scale(1.2);
+}
+
+/* Fade overlay when opening */
+.fade {
+  position: absolute;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+
+  background: rgba(0,0,0,0);
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 200ms ease, background 200ms ease;
+}
+
+.fadeOn {
+  opacity: 1;
+  background: rgba(0,0,0,0.72);
+}
+
+.fadeText {
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+/* mobile tweaks */
+@media (max-width: 640px) {
+  .ui { padding: 40px; }
+  .introInner { padding: 18px; }
+  .dots { right: 10px; }
+  .primary, .secondary { width: 100%; text-align: center; }
+}
