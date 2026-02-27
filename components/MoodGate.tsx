@@ -3,13 +3,19 @@
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import styles from "../styles/MoodGate.module.scss";
-import type { Box } from "@/utils/types";
 
-export default function MoodGate({ allBoxes }: { allBoxes: Box[] }) {
+export type ReelBox = {
+  id: number;
+  slug: string;
+  name: string;
+  description: string | null;
+  boxPrice: number | null;
+  boxImg: string; // вже без null, бо ми нормалізували на сервері
+};
+
+export default function MoodGate({ allBoxes }: { allBoxes: ReelBox[] }) {
   const router = useRouter();
   const [loadingId, setLoadingId] = useState<string | null>(null);
-
-  // activeSection: 0 = intro, 1..N = boxes
   const [activeSection, setActiveSection] = useState(0);
 
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -25,14 +31,13 @@ export default function MoodGate({ allBoxes }: { allBoxes: Box[] }) {
     });
   };
 
-  const go = async (box: Box) => {
+  const go = async (box: ReelBox) => {
     if (loadingId) return;
     setLoadingId(String(box.id));
     await new Promise((r) => setTimeout(r, 380));
-    router.push(`/mood/${box.slug}`); // або `/box/${box.slug}` якщо так у тебе
+    router.push(`/mood/${box.slug}`);
   };
 
-  // IntersectionObserver для визначення активного екрану
   useEffect(() => {
     const root = containerRef.current;
     if (!root) return;
@@ -41,10 +46,7 @@ export default function MoodGate({ allBoxes }: { allBoxes: Box[] }) {
       (entries) => {
         const visible = entries
           .filter((e) => e.isIntersecting)
-          .sort(
-            (a, b) =>
-              (b.intersectionRatio ?? 0) - (a.intersectionRatio ?? 0)
-          )[0];
+          .sort((a, b) => (b.intersectionRatio ?? 0) - (a.intersectionRatio ?? 0))[0];
 
         if (!visible) return;
 
@@ -58,12 +60,10 @@ export default function MoodGate({ allBoxes }: { allBoxes: Box[] }) {
     return () => obs.disconnect();
   }, [allBoxes.length]);
 
-  // total sections = intro + boxes
   const totalSections = 1 + allBoxes.length;
 
   return (
     <main className={styles.page}>
-      {/* Dots */}
       <nav className={styles.dots} aria-label="Навігація">
         {Array.from({ length: totalSections }).map((_, i) => (
           <button
@@ -76,9 +76,7 @@ export default function MoodGate({ allBoxes }: { allBoxes: Box[] }) {
         ))}
       </nav>
 
-      {/* Scroll container */}
       <div className={styles.snap} ref={containerRef}>
-        {/* Intro */}
         <section
           className={`${styles.section} ${styles.intro}`}
           data-index={0}
@@ -93,7 +91,7 @@ export default function MoodGate({ allBoxes }: { allBoxes: Box[] }) {
             <div className={styles.brand}>SEOUL MEMO</div>
 
             <h1 className={styles.h1}>
-              Сеул це не про місто.
+              Сеул — не про місто.
               <br />
               Це про відчуття.
             </h1>
@@ -111,7 +109,7 @@ export default function MoodGate({ allBoxes }: { allBoxes: Box[] }) {
                 Обрати
               </button>
 
-              {allBoxes?.length ? (
+              {allBoxes.length ? (
                 <button
                   type="button"
                   className={styles.secondary}
@@ -130,10 +128,8 @@ export default function MoodGate({ allBoxes }: { allBoxes: Box[] }) {
           </div>
         </section>
 
-        {/* Reels (boxes) */}
         {allBoxes.map((box, i) => {
-          const idx = i + 1; // бо 0 — intro
-          // const isLast = i === allBoxes.length - 1;
+          const idx = i + 1;
 
           return (
             <section
@@ -144,16 +140,16 @@ export default function MoodGate({ allBoxes }: { allBoxes: Box[] }) {
                 sectionRefs.current[idx] = el;
               }}
             >
-              {/* background image */}
               <div
                 className={styles.bgImage}
-                style={{ backgroundImage: `url(${box.boxImg})` }}
+                style={{
+                  backgroundImage: box.boxImg ? `url(${box.boxImg})` : "none",
+                }}
                 aria-hidden="true"
               />
 
               <div className={styles.overlay} />
 
-              {/* content */}
               <div className={styles.ui}>
                 <div className={styles.kicker}>
                   Seoul memo / mood {String(i + 1).padStart(2, "0")} of{" "}
@@ -182,17 +178,12 @@ export default function MoodGate({ allBoxes }: { allBoxes: Box[] }) {
                     Обрати →
                   </button>
                 </div>
-
-                {/* <div className={styles.hint}>
-                  {isLast ? "Кінець. Гортай вгору або обери інший." : "Гортай вниз"}
-                </div> */}
               </div>
             </section>
           );
         })}
       </div>
 
-      {/* Fade overlay on navigation */}
       <div className={`${styles.fade} ${loadingId ? styles.fadeOn : ""}`}>
         <div className={styles.fadeText}>
           {activeBox ? `Відкриваю: ${activeBox.name}` : "…"}
